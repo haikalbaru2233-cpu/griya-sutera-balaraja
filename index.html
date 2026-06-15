@@ -164,7 +164,26 @@
             position: relative; width: 100%; height: 450px;
             background: #e8f4f8;
         }
-        .map-embed iframe {
+        
+        .map-static {
+            background: linear-gradient(135deg, #e8f4f8 0%, #d1ecf1 100%);
+            border: 2px dashed var(--primary-light);
+            border-radius: 16px;
+            padding: 60px 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .map-static:hover {
+            background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        .map-static-icon { font-size: 3.5rem; margin-bottom: 15px; }
+        .map-static-text h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 8px; }
+        .map-static-text p { color: var(--text-light); }
+.map-embed iframe {
             width: 100%; height: 100%; border: none;
         }
         .map-fallback {
@@ -389,19 +408,15 @@
             <p>Strategis di jantung Balaraja, akses mudah ke mana saja</p>
         </div>
         <div class="map-wrapper">
-            <div class="map-embed">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126917.297!2d106.45!3d-6.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4200e8596518d1%3A0x301576d14feb990!2sBalaraja%2C%20Kec.%20Balaraja%2C%20Kabupaten%20Tangerang%2C%20Banten!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
-                    allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-            <div class="map-fallback" id="mapFallback">
-                <p>🗺️ Peta tidak dapat dimuat</p>
-                <a href="https://www.google.com/maps/search/Balaraja,+Tangerang,+Banten" target="_blank" class="map-link-btn">
-                    Buka di Google Maps →
-                </a>
-            </div>
+            <a href="https://www.google.com/maps/search/Griya+Sutera+Balaraja+Tangerang" target="_blank" style="display:block;text-decoration:none;">
+                <div class="map-static">
+                    <div class="map-static-icon">🗺️</div>
+                    <div class="map-static-text">
+                        <h3>📍 Griya Sutera Balaraja</h3>
+                        <p>Ketuk untuk membuka di Google Maps</p>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
 </section>
